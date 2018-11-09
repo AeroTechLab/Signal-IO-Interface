@@ -7,11 +7,11 @@ Computer I/O boards commonly offer many digital or analog ports/channels for rea
 
 ## Usage
 
-On a terminal, get the [GitHub code repository](https://github.com/LabDin/Signal-IO-Interface) with:
+On a terminal, get the [GitHub code repository](https://github.com/EESC-MKGroup/Signal-IO-Interface) with:
 
-    $ git clone https://github.com/LabDin/Signal-IO-Interface [<my_project_folder>]
+    $ git clone https://github.com/EESC-MKGroup/Signal-IO-Interface [<my_project_folder>]
 
-This code is dependent on macros from [Plug-in Loader](https://github.com/LabDin/Plugin-Loader) project, that is automatically linked as a [git submodule](https://chrisjean.com/git-submodules-adding-using-removing-and-updating/).
+This code is dependent on macros from [Plug-in Loader](https://github.com/EESC-MKGroup/Plugin-Loader) project, that is automatically linked as a [git submodule](https://chrisjean.com/git-submodules-adding-using-removing-and-updating/).
 
 To add that repository to your sources, navigate to the root project folder and clone it with:
 
@@ -22,4 +22,4 @@ To add that repository to your sources, navigate to the root project folder and 
 
 ## Documentation
 
-Doxygen-generated detailed methods documentation is available on a [GitHub Page](https://labdin.github.io/Signal-IO-Interface/classSIGNAL__IO__INTERFACE.html)
+Doxygen-generated detailed methods documentation is available on a [GitHub Page](https://eesc-mkgroup.github.io/Signal-IO-Interface/classSIGNAL__IO__INTERFACE.html)
