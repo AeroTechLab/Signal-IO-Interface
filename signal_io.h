@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////
 //                                                                                //
-//  Copyright (c) 2016-2018 Leonardo Consoni <consoni_2519@hotmail.com>           //
+//  Copyright (c) 2016-2020 Leonardo Consoni <leonardojc@protonmail.com>          //
 //                                                                                //
 //  This file is part of Signal I/O Interface.                                    //
 //                                                                                //
@@ -39,16 +39,16 @@
 
 /// Signal input/output interface declaration macro
 #define SIGNAL_IO_INTERFACE( Namespace, INIT_FUNCTION ) \
-        INIT_FUNCTION( int, Namespace, InitDevice, const char* ) \
-        INIT_FUNCTION( void, Namespace, EndDevice, int ) \
-        INIT_FUNCTION( void, Namespace, Reset, int ) \
-        INIT_FUNCTION( bool, Namespace, HasError, int ) \
-        INIT_FUNCTION( size_t, Namespace, GetMaxInputSamplesNumber, int ) \
-        INIT_FUNCTION( size_t, Namespace, Read, int, unsigned int, double* ) \
-        INIT_FUNCTION( bool, Namespace, CheckInputChannel, int, unsigned int ) \
-        INIT_FUNCTION( bool, Namespace, Write, int, unsigned int, double ) \
-        INIT_FUNCTION( bool, Namespace, AcquireOutputChannel, int, unsigned int ) \
-        INIT_FUNCTION( void, Namespace, ReleaseOutputChannel, int, unsigned int ) 
+        INIT_FUNCTION( long int, Namespace, InitDevice, const char* ) \
+        INIT_FUNCTION( void, Namespace, EndDevice, long int ) \
+        INIT_FUNCTION( void, Namespace, Reset, long int ) \
+        INIT_FUNCTION( bool, Namespace, HasError, long int ) \
+        INIT_FUNCTION( size_t, Namespace, GetMaxInputSamplesNumber, long int ) \
+        INIT_FUNCTION( size_t, Namespace, Read, long int, unsigned int, double* ) \
+        INIT_FUNCTION( bool, Namespace, CheckInputChannel, long int, unsigned int ) \
+        INIT_FUNCTION( bool, Namespace, Write, long int, unsigned int, double ) \
+        INIT_FUNCTION( bool, Namespace, AcquireOutputChannel, long int, unsigned int ) \
+        INIT_FUNCTION( void, Namespace, ReleaseOutputChannel, long int, unsigned int ) 
 
         
 #endif // SIGNAL_IO_H 
@@ -57,42 +57,42 @@
 /// @brief File/string/stream data input/output methods to be implemented by plugins
 ///    
 /// @memberof SIGNAL_IO_INTERFACE
-/// @fn int InitDevice( const char* deviceConfig )                                                                            
+/// @fn long int InitDevice( const char* deviceConfig )                                                                            
 /// @brief Creates plugin specific signal input/output device data structure
 /// @param[in] deviceConfig implementation specific device configuration string
 /// @return generic identifier to newly created device (SIGNAL_IO_TASK_INVALID_ID on errors)
 ///   
 /// @memberof SIGNAL_IO_INTERFACE
-/// @fn void EndDevice( int deviceID )
+/// @fn void EndDevice( long int deviceID )
 /// @brief Discards given signal input/output device data structure    
 /// @param[in] deviceID input/output device identifier
 ///   
 /// @memberof SIGNAL_IO_INTERFACE
-/// @fn bool HasError( int deviceID )                                                                                
+/// @fn bool HasError( long int deviceID )                                                                                
 /// @brief Verifies occurence of errors on given device
 /// @param[in] deviceID input/output device identifier 
 /// @return true on detected error, false otherwise 
 ///   
 /// @memberof SIGNAL_IO_INTERFACE        
-/// @fn void Reset( int deviceID )
+/// @fn void Reset( long int deviceID )
 /// @brief Resets data and errors for given device
 /// @param[in] deviceID input/output device identifier
 ///   
 /// @memberof SIGNAL_IO_INTERFACE
-/// @fn size_t GetMaxInputSamplesNumber( int deviceID )
+/// @fn size_t GetMaxInputSamplesNumber( long int deviceID )
 /// @brief Gets number of samples aquired for every given device input channel on each Read() call
 /// @param[in] deviceID input device identifier
 /// @return max read samples number (0 on errors)
 ///   
 /// @memberof SIGNAL_IO_INTERFACE
-/// @fn bool CheckInputChannel( int deviceID, unsigned int channel )
+/// @fn bool CheckInputChannel( long int deviceID, unsigned int channel )
 /// @brief Check reading availability for specified input channel of given device
 /// @param[in] deviceID input device identifier
 /// @param[in] channel input device channel index
 /// @return true on channel availability for reading, false otherwise
 ///   
 /// @memberof SIGNAL_IO_INTERFACE
-/// @fn size_t Read( int deviceID, unsigned int channel, double* ref_value )
+/// @fn size_t Read( long int deviceID, unsigned int channel, double* ref_value )
 /// @brief Reads samples list from specified channel of given device
 /// @param[in] deviceID input device identifier
 /// @param[in] channel input device channel index
@@ -100,20 +100,20 @@
 /// @return number of samples read (0 on errors)
 ///   
 /// @memberof SIGNAL_IO_INTERFACE
-/// @fn bool AcquireOutputChannel( int deviceID, unsigned int channel )
+/// @fn bool AcquireOutputChannel( long int deviceID, unsigned int channel )
 /// @brief Check availability and get exclusive access for specified output channel of given device
 /// @param[in] deviceID output device identifier
 /// @param[in] channel output device channel index
 /// @return true on successful channel acquisition (availability for writing), false otherwise
 ///   
 /// @memberof SIGNAL_IO_INTERFACE
-/// @fn void ReleaseOutputChannel( int deviceID, unsigned int channel )
+/// @fn void ReleaseOutputChannel( long int deviceID, unsigned int channel )
 /// @brief Give up exclusive access for specified output channel of given device
 /// @param[in] deviceID output device identifier
 /// @param[in] channel output device channel index
 ///   
 /// @memberof SIGNAL_IO_INTERFACE
-/// @fn bool Write( int deviceID, unsigned int channel, double value )
+/// @fn bool Write( long int deviceID, unsigned int channel, double value )
 /// @brief Writes value to specified channel of given device
 /// @param[in] deviceID output device identifier
 /// @param[in] channel output device channel index

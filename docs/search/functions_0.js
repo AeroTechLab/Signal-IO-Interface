@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['acquireoutputchannel',['AcquireOutputChannel',['../classSIGNAL__IO__INTERFACE.html#ad5837cb13e9184cfea75ba579c7f53a5',1,'SIGNAL_IO_INTERFACE']]]
+  ['acquireoutputchannel_17',['AcquireOutputChannel',['../classSIGNAL__IO__INTERFACE.html#abefcd119f392d11db85eea5652a4d536',1,'SIGNAL_IO_INTERFACE']]]
 ];

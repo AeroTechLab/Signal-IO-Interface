@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getmaxinputsamplesnumber',['GetMaxInputSamplesNumber',['../classSIGNAL__IO__INTERFACE.html#a90e8d1884a11392fba57fae28158069a',1,'SIGNAL_IO_INTERFACE']]]
+  ['getmaxinputsamplesnumber_20',['GetMaxInputSamplesNumber',['../classSIGNAL__IO__INTERFACE.html#a99facd0c9edc596fc420fc5eca9c63a4',1,'SIGNAL_IO_INTERFACE']]]
 ];
