@@ -1,4 +1,4 @@
-cmake_minimum_required( VERSION 2.8 )
+cmake_minimum_required( VERSION 3.10 )
 project( Signal-IO-Interface )
 
 set( CMAKE_C_STANDARD 99 )
